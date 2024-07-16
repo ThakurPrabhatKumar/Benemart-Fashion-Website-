@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ 	<head>
+ 		<!-- Meta Tags -->
+		<meta charset="UTF-8">
+		<meta name="author" content="Kamran Mubarik">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Title -->
+ 		<title>BENEMART</title>
+ 		<!-- Style Sheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<!-- Javascript -->	
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script>		   
+		    $( function() {
+			    $( "#slider-range" ).slider({
+			      range: true,
+			      min: 0,
+			      max: 10000,
+			      values: [ 1000, 3000 ],
+			      slide: function( event, ui ) {
+			        $( "#amount" ).val( "Rs." + ui.values[ 0 ] + " - Rs." + ui.values[ 1 ] );
+			      }
+			    });
+			    $( "#amount" ).val( "Rs." + $( "#slider-range" ).slider( "values", 0 ) +
+			      " - Rs." + $( "#slider-range" ).slider( "values", 1 ) );
+			});
+		 </script>
+ 	</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div class="brand">
+				<div class="logo">
+					<a href="index.html">
+						<img src="img/icons/online_shopping.png">
+						<div class="logo-text">
+							<p class="big-logo">BENEMART</p>
+							<!-- <p class="small-logo">online shop</p> -->
+						</div>
+					</a>
+				</div> <!-- logo -->
+				<div class="shop-icon">
+					<div class="dropdown">
+						<img src="img/icons/account.png">
+						<div class="dropdown-menu">
+							<ul>
+								<li><a href="account.html">My Account</a></li>
+								<li><a href="orders.html">My Orders</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/heart.png">
+						<div class="dropdown-menu wishlist-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Product</th>
+										<th> Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<!-- <td><img src="img/product/img1.jpg"></td>
+										<td>product name</td> -->
+									</tr>
+									<tr>
+										<!-- <td><img src="img/product/img2.jpg"></td>
+										<td>product name</td> -->
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="dropdown">
+						<img src="img/icons/shopping_cart.png">
+						<div class="dropdown-menu cart-item">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>Product</th>
+										<th>Name</th>
+										<th class="center">Price</th>
+										<th class="center">Qty.</th>
+										<th class="center">Amount</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><img src="img/product/img1.jpg"></td>
+										<td>Timex Watch</td>
+										<td class="center">3999</td>
+										<td class="center">2</td>
+										<td class="center">7998</td>
+									</tr>
+									<!-- <tr>
+										<td><img src="img/product/img2.jpg"></td>
+										<td>product name</td>
+										<td class="center">1500</td>
+										<td class="center">2</td>
+										<td class="center">3000</td>
+									</tr> -->
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div> <!-- shop icons -->
+			</div> <!-- brand -->
+
+			<div class="menu-bar">
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="shop.html">Shop</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="others.html">Others</a></li>
+					</ul>
+				</div>
+				<div class="search-bar">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" name="search" placeholder="Search">
+							<!-- <img src="img/icons/search.png"> -->
+						</div>
+					</form>
+				</div>
+			</div> <!-- menu -->
+		</div> <!-- container -->
+	</header> <!-- header -->
+
+	<div class="container">
+		<main>
+			<div class="breadcrumb">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li> / </li>
+					<li>Shop</li>
+				</ul>
+			</div> <!-- End of Breadcrumb-->
+
+			<div class="new-product-section shop">
+				<div class="sidebar">
+					<div class="sidebar-widget">
+						<h3>Category</h3>
+						<ul>
+							<li><a href="">Winter Fashion </a></li>
+							<li><a href="">Summer Fashion </a></li>
+							<li><a href="">InnerWear Collection</a></li>
+
+						</ul>
+					</div>
+					<div class="sidebar-widget">
+						<h3>Filter</h3>
+						<p>
+						  <label for="amount"></label>
+						  <input type="text" id="amount" readonly style="border:0; color:#F0E68C;  margin-bottom: 5px;">
+						</p>						 
+						<div id="slider-range"></div>
+					</div>
+				</div>
+				<div class="product-content">
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/watch1.jpeg">
+						</a>
+						<div class="product-detail">
+							<h3>Men's / Watches</h3>
+							<h2>Titan Watch</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.3999/-</p>
+						</div>						
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/jeans.jpeg">
+						</a>
+						<div class="product-detail">
+							<h3>Men's / Jeans</h3>
+							<h2>Roadster Jeans</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.2999/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/watch2.jpeg">
+						</a>
+						<div class="product-detail">
+							<h3>Men's / Watches</h3>
+							<h2>Timex Watch</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.5999/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/shoe1.jpeg">
+						</a>
+						<div class="product-detail">
+							<h3>Men's / Shoes</h3>
+							<h2>Nike Sneaker</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.3999/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/glasses1.jpeg">
+						</a>
+						<div class="product-detail">
+							<h3>Sun-Glasses</h3>
+							<h2>Ray-Ban Sun Glass</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.24000/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/bag1.jpeg">
+						</a>
+						<div class="product-detail">
+							<h3>Women's / Hand Bags</h3>
+							<h2>Leather Bag</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.3999-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/shoe2.jpeg">
+						</a>
+						<div class="product-detail">
+							<h3>Men's / Shoes</h3>
+							<h2>RedTape Sneaker</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.1399/-</p>
+						</div>
+					</div>
+					<div class="product">
+						<a href="product.html">
+							<img src="img/product/backpack.jpeg">
+						</a>
+						<div class="product-detail">
+							<h3>Women's / Hand Bags</h3>
+							<h2>Leather carry Bag</h2>
+							<a href="#">Add to Cart</a>
+							<p>Rs.5200/-</p>
+						</div>
+					</div>
+				</div>
+			</div> <!-- New Product Section -->
+			<div class="load-more">
+				<a href="others.html">Load More</a>
+			</div>		
+		</main> <!-- Main Area -->
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="footer-widget">
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>More Information</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="terms.html">Terms & Conditions</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Profile</h3>
+					</div>
+					<div class="widget-content">
+						<ul>
+							<li><a href="account.html">My Account</a></li>
+							<li><a href="checkout.html">Checkout</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="widget">
+					<div class="widget-heading">
+						<h3>Follow us</h3>
+					</div>
+					<div class="widget-content">
+						<div class="follow">
+							<ul>
+								<li><a href="https://www.facebook.com/"><img src="img/icons/facebook.png"></a></li>
+								<li><a href="#"><img src="img/icons/twitter.png"></a></li>
+								<li><a href="#"><img src="img/icons/instagram.png"></a></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="widget-heading">
+						<!-- <h3>Subscribe for Newsletter</h3> -->
+					</div>
+					<div class="widget-content">
+						<div class="subscribe">
+							<form>
+								<div class="form-group">
+									<input type="text" class="form-control" name="subscribe" placeholder="Email">
+									<!-- <img src="img/icons/paper_plane.png"> -->
+								</div>
+							</form>
+						</div>						
+					</div>
+				</div>
+			</div> <!-- Footer Widget -->
+			<div class="footer-bar">
+				<div class="copyright-text">
+					<p>Copyright 2024 - All Rights Reserved By Prabhat Kumar</p>
+				</div>
+				<!-- <div class="payment-mode">
+					<img src="img/icons/paper_money.png">
+					<img src="img/icons/visa.png">
+					<img src="img/icons/mastercard.png">
+				</div> -->
+			</div> <!-- Footer Bar -->
+		</div>
+	</footer> <!-- Footer Area -->
+
+</body>
+
+</html>
